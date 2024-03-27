@@ -31,7 +31,7 @@ Utilisez le fichier schema.sql pour créer la structure de la base de données.
 2-Configuration de l'environnement :
 
 3-Modifiez le fichier config.php avec les informations de connexion à votre base de données.
-Lancer l'application :
+Lancer l'application : 
 
 4-Démarrez un serveur PHP local ou utilisez un serveur web comme Apache pour exécuter l'application.
 L'application sera accessible à l'adresse http://localhost:port par défaut.
