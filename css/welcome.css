@@ -1,0 +1,247 @@
+:root {
+    --bg-color1: rgba(1, 0, 1, 1);
+    --bg-color2: rgba(16, 20, 25, 1);
+    --sweet-pink: rgb(237, 20, 125, 1);
+    --sweet-little-pink: rgba(255, 237, 244, 1);
+    --sweet-purple: rgb(129, 121, 206);
+    --sweet-little-purple: rgba(233, 230, 255, 1);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    font-family: sans-serif;
+    text-decoration: none;
+
+}
+
+a {
+    color: black;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background-size: cover;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, .7) 0%, transparent 70%, rgba(0, 0, 0, .7) 86%), url("../assets/welcomebg.webp") center center fixed;
+    background-size: cover;
+    position: relative;
+
+}
+
+header {
+    display: flex;
+    width: 100%;
+}
+
+header nav {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+
+}
+
+header nav ul {
+    display: flex;
+    column-gap: 1em;
+
+}
+
+header nav ul li p {
+    color: black;
+    background: white;
+    padding: .5em 1em;
+    border-radius: 2em;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+.login {
+    background: none;
+    color: white;
+}
+
+
+.login:hover {
+    background: rgba(255, 255, 255, .3);
+}
+
+nav .logo {
+    width: 70px;
+    height: 70px;
+
+}
+
+nav .logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: auto;
+    cursor: pointer;
+}
+
+.welcome {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.swipe {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.swipe h1 {
+    cursor: pointer;
+    color: rgba(255, 255, 255, 1);
+    font-size: 6em;
+    margin-block: .5em;
+}
+
+.swipe .create {
+    cursor: pointer;
+    background: linear-gradient(370deg, var(--sweet-pink) 0%, var(--sweet-pink) 50%, orange 95%);
+    color: white;
+    font-size: 1.3em;
+    padding: .5em 1em;
+    border-radius: 2em;
+}
+
+.swipe .create:hover {
+    background: linear-gradient(375deg, var(--sweet-pink) 0%, var(--sweet-pink) 50%, orange 95%);
+}
+
+#login,
+#signIn {
+    background: rgba(0, 0, 0, .5);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    justify-content: center;
+}
+
+#login h1,
+#signIn h1{
+    margin-bottom: 1em;
+}
+
+.closelogin,
+.closeregister {
+    position: absolute;
+    padding: .5em 1em;
+    top: 2em;
+    border-radius: 2em;
+    background: var(--sweet-little-purple);
+    color: var(--sweet-purple);
+    margin: 1em;
+}
+
+#loginForm {
+    margin: 1em;
+    display: flex;
+    flex-direction: column;
+    width: 20em;
+    row-gap: .2em;
+}
+
+#loginForm input {
+    height: 2em;
+    font-size: 18px;
+    border-radius: 7px;
+    outline: none;
+    display: flex;
+    justify-content: center;
+}
+
+#registerForm {
+    display: flex;
+    width: 20em;
+    flex-direction: column;
+}
+
+.infoBlock {
+    width: 100%;
+    flex-direction: column;
+    display: flex;
+    row-gap: .5em;
+}
+
+.label {
+    display: flex;
+    row-gap: .5em;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.label select, .label input{
+    width: 60%;
+}
+.label input{
+    width: 65%;
+}
+
+.yourage {
+    padding-bottom: .5em;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#registerForm input,#registerForm #city {
+    height: 1.6em;
+    font-size: 16px;
+    border-radius: 7px;
+    outline: none;
+    display: flex;
+    justify-content: center;
+}
+
+#registerForm #city{
+    margin-block: .5em;
+}
+
+.error {
+    background: var(--sweet-little-purple);
+    color: red;
+    text-align: center;
+    margin-block: .5em;
+}
+
+.same {
+    background: white;
+    text-align: center;
+    border: 1px solid white;
+}
+
+#loginBtn, #registerBtn {
+    background: var(--sweet-little-pink);
+    color: var(--sweet-pink);
+    border: 1px solid var(--sweet-little-pink);
+
+}
+
+#loginBtn:hover , #registerBtn:hover{
+    background: var(--sweet-pink);
+    color: white;
+    border-color: var(--sweet-pink);
+}
+
+@media (width <=750px) {
+    .swipe h1 {
+        font-size: 4em;
+    }
+}
